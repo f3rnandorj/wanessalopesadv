@@ -4,22 +4,22 @@ import { Image, Text } from "@/components";
 export function NavBar() {
   return (
     <nav
-      className="w-full flex h-[15rem] justify-evenly items-center
+      className="w-full flex h-[15rem] justify-evenly items-center px-28
       md:h-[20rem] 
-      lg:h-[9.75rem] 
+      lg:h-[10.5rem] 
       "
       style={{ backgroundImage: `url(${backgroundImage.header.src})` }}
     >
       <Image
         alt=""
         src={utilsImages.stamp.src}
-        height={48}
-        width={133}
+        height={60}
+        width={145}
         className="pt-20"
       />
 
       <div>
-        <Text id="LOGO">LOGO</Text>
+        <Text>LOGO</Text>
       </div>
 
       <div className="flex flex-col gap-1">
@@ -33,10 +33,9 @@ export function NavBar() {
 
 interface SwipeButtonProps {
   title: string;
-  swipeId: string;
 }
 
-function SwipeButton({ title, swipeId }: SwipeButtonProps) {
+function SwipeButton({ title }: SwipeButtonProps) {
   //TODO: implement SwipeButton functionality
 
   return (
@@ -51,14 +50,11 @@ function SwipeButton({ title, swipeId }: SwipeButtonProps) {
 const swipeButtonDataToMap: SwipeButtonProps[] = [
   {
     title: "Quem sou",
-    swipeId: "",
   },
   {
     title: "Como atuamos",
-    swipeId: "",
   },
   {
     title: "Nossos serviços",
-    swipeId: "",
   },
 ];

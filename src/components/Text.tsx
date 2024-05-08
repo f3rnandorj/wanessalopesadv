@@ -17,7 +17,7 @@ type AllowedTags = "h1" | "h2" | "h3" | "span" | "p";
 type HTMLAdaptedProps = Pick<TextHTMLElement, "dangerouslySetInnerHTML">;
 
 interface TextProps extends HTMLAdaptedProps {
-  id: string;
+  id?: string;
   tag?: AllowedTags;
   preset?: TextVariants;
   children?: React.ReactNode;
@@ -46,6 +46,8 @@ export function Text({
   const fontWeight = getFontWeight(isMedium, isBold);
 
   useEffect(() => {
+    if (!id) return;
+
     const handleScroll = () => {
       const scrollPosition = window.scrollY + window.innerHeight;
       const elementPosition = document.getElementById(id)?.offsetTop || 0;
