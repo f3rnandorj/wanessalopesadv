@@ -22,7 +22,7 @@ export function NavBar() {
         <Text>LOGO</Text>
       </div>
 
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-1.5">
         {swipeButtonDataToMap.map((button) => (
           <SwipeButton key={button.title} {...button} />
         ))}
@@ -39,8 +39,8 @@ function SwipeButton({ title }: SwipeButtonProps) {
   //TODO: implement SwipeButton functionality
 
   return (
-    <button className="bg-zinc-950 py-1.5 px-2">
-      <Text id={title} preset="small" className="text-zinc-300">
+    <button className="bg-zinc-950 py-1.5 px-2 hover:bg-zinc-100 hover:text-zinc-950 text-zinc-300 border-zinc-950 border-[1px]">
+      <Text id={title} preset="small">
         {title}
       </Text>
     </button>

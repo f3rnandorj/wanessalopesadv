@@ -4,9 +4,24 @@ export default function Home() {
   return (
     <div className="flex flex-1 flex-col">
       <Section>
-        <Text id="hello" className="text-white">
-          Hello world
+        <Text
+          preset="heading"
+          tag="h1"
+          isBold
+          className="text-zinc-50 text-center mb-10"
+        >
+          Precisa de um Especialista em Direito do Consumidor?
         </Text>
+
+        <Text tag="p" className="text-zinc-300 text-center mb-5">
+          Conte com César Ribeiro para defender seus direitos.
+        </Text>
+      </Section>
+
+      <Section></Section>
+
+      <Section>
+        <div className="h-screen"></div>
       </Section>
     </div>
   );

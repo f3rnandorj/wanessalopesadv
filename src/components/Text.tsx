@@ -44,6 +44,7 @@ export function Text({
 
   const fontSize = $fontSizeStyles[preset];
   const fontWeight = getFontWeight(isMedium, isBold);
+  const fontHeight = getFontHeight(preset);
 
   useEffect(() => {
     if (!id) return;
@@ -62,15 +63,30 @@ export function Text({
 
   return (
     <motion.text
-      className={` ${className} ${fontSize} ${fontWeight} `}
       id={id}
+      className={`${fontSize} ${fontWeight} `}
       initial={isVisible ? { opacity: 0.2 } : false}
       animate={{ opacity: isVisible ? 1 : 0.2 }}
       transition={{ duration: 1.5 }}
     >
-      <Tag {...textProps}>{children && children}</Tag>
+      <Tag {...textProps} className={`${fontHeight} ${className}`}>
+        {children && children}
+      </Tag>
     </motion.text>
   );
+}
+
+function getFontHeight(preset: TextVariants) {
+  switch (true) {
+    case preset === "heading":
+      return "leading-tight";
+
+    case preset === "small":
+      return "";
+
+    default:
+      return "";
+  }
 }
 
 function getFontWeight(isMedium: boolean, isBold: boolean) {
@@ -89,7 +105,7 @@ function getFontWeight(isMedium: boolean, isBold: boolean) {
 type TextVariants = "paragraph" | "heading" | "small";
 
 export const $fontSizeStyles: Record<TextVariants, string> = {
-  heading: " lg:text-6xl text-3xl",
+  heading: " lg:text-6xl text-3xl ",
   paragraph: "lg:text-[1.25rem]",
   small: "text-base",
 };
