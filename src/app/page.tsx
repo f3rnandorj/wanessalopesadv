@@ -1,4 +1,4 @@
-import { Section, Text } from "@/components";
+import { Button, Section, Text } from "@/components";
 
 export default function Home() {
   return (
@@ -10,12 +10,15 @@ export default function Home() {
           isBold
           className="text-zinc-50 text-center mb-10"
         >
-          Precisa de um Especialista em Direito do Consumidor?
+          Precisa de um Especialista em <br />
+          Direito do Consumidor?
         </Text>
 
-        <Text tag="p" className="text-zinc-300 text-center mb-5">
+        <Text tag="p" className="text-zinc-300 text-center mb-10">
           Conte com César Ribeiro para defender seus direitos.
         </Text>
+
+        <Button title="Quero Atendimento" />
       </Section>
 
       <Section></Section>

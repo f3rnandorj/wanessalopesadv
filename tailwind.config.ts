@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 const config: Config = {
   content: [
@@ -11,8 +12,20 @@ const config: Config = {
       fontFamily: {
         // poppins: ["var(--font-poppins)"],
       },
+      boxShadow: {
+        button: "0px 0px 30px rgba(0, 0, 0, 0.2);",
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addBase, addComponents, addUtilities, theme }) {
+      addUtilities({
+        ".button-hover": {
+          backgroundColor: "rgb(244 244 245 / var(--tw-bg-opacity))",
+          color: "rgb(9 9 11 / var(--tw-text-opacity))",
+        },
+      });
+    }),
+  ],
 };
 export default config;

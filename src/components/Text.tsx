@@ -102,10 +102,11 @@ function getFontWeight(isMedium: boolean, isBold: boolean) {
   }
 }
 
-type TextVariants = "paragraph" | "heading" | "small";
+type TextVariants = "paragraph" | "heading" | "small" | "button";
 
 export const $fontSizeStyles: Record<TextVariants, string> = {
   heading: " lg:text-6xl text-3xl ",
   paragraph: "lg:text-[1.25rem]",
   small: "text-base",
+  button: "text-base",
 };

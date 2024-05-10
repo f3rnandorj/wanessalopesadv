@@ -39,7 +39,9 @@ function SwipeButton({ title }: SwipeButtonProps) {
   //TODO: implement SwipeButton functionality
 
   return (
-    <button className="bg-zinc-950 py-1.5 px-2 hover:bg-zinc-100 hover:text-zinc-950 text-zinc-300 border-zinc-950 border-[1px]">
+    <button
+      className={`bg-zinc-950 py-1.5 px-2  border-zinc-950 border-[1px] text-zinc-300 hover:button-hover`}
+    >
       <Text id={title} preset="small">
         {title}
       </Text>

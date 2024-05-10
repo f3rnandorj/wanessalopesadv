@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+}
+
+@layer utilities {
+  .button-hover {
+    background-color: theme("backgroundColor.zinc.100");
+    color: theme("textColor.zinc.950");
+  }
+}
