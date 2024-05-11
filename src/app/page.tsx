@@ -1,4 +1,4 @@
-import { Button, Section, ServiceCard, Text } from "@/components";
+import { Button, FlowOfWork, Section, ServiceCard, Text } from "@/components";
 
 export default function Home() {
   return (
@@ -51,6 +51,18 @@ export default function Home() {
           <ServiceCard />
           <ServiceCard />
         </div>
+      </Section>
+
+      <Section>
+        <Text
+          tag="p"
+          preset="heading_sm"
+          className="text-zinc-50 text-center mb-8"
+        >
+          Entenda Como Trabalhamos
+        </Text>
+
+        <FlowOfWork flow="first" />
       </Section>
 
       <Section>

@@ -1,4 +1,4 @@
-import { Text } from "./Text";
+import { Text } from "../Text/Text";
 
 type ButtonVariants = "defaultMain" | "outline";
 type ButtonStyles = {
