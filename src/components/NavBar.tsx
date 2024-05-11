@@ -18,9 +18,7 @@ export function NavBar() {
         className="pt-20"
       />
 
-      <div>
-        <Text>LOGO</Text>
-      </div>
+      <Image alt="logo" src={utilsImages.logo} width={235} height={130} />
 
       <div className="flex flex-col gap-1.5">
         {swipeButtonDataToMap.map((button) => (

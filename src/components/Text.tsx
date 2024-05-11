@@ -81,7 +81,13 @@ function getFontHeight(preset: TextVariants) {
     case preset === "heading":
       return "leading-tight";
 
+    case preset === "heading_sm":
+      return "";
+
     case preset === "small":
+      return "";
+
+    case preset === "button":
       return "";
 
     default:
@@ -102,10 +108,11 @@ function getFontWeight(isMedium: boolean, isBold: boolean) {
   }
 }
 
-type TextVariants = "paragraph" | "heading" | "small" | "button";
+type TextVariants = "paragraph" | "heading" | "heading_sm" | "small" | "button";
 
 export const $fontSizeStyles: Record<TextVariants, string> = {
-  heading: " lg:text-6xl text-3xl ",
+  heading: " lg:text-6xl text-3xl",
+  heading_sm: "lg:text-2xl text-xl",
   paragraph: "lg:text-[1.25rem]",
   small: "text-base",
   button: "text-base",
