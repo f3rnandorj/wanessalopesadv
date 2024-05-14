@@ -8,7 +8,7 @@ import {
   Image,
 } from "@/components";
 
-import { evidences } from "@/assets";
+import { backgroundImage, evidences, utilsImages } from "@/assets";
 
 export default function Home() {
   return (
@@ -85,10 +85,63 @@ export default function Home() {
           A Opinião de Nossos Clientes
         </Text>
 
-        <Image src={evidences.evidence} alt="" />
-        <Image src={evidences.evidence1} alt="" />
-        <Image src={evidences.evidence2} alt="" />
-        <Image src={evidences.evidence3} alt="" />
+        <div className="grid grid-cols-2 gap-4 mb-8 max-w-[90%]">
+          <Image src={evidences.evidence} alt="" className="w-full h-full" />
+          <Image src={evidences.evidence2} alt="" className="w-full h-full" />
+          <Image src={evidences.evidence1} alt="" className="w-full h-full" />
+          <Image src={evidences.evidence3} alt="" className="w-full h-full" />
+        </div>
+
+        <Button title="Quero Atendimento Agora" />
+      </Section>
+
+      <Section>
+        <div className="flex h-[420px]">
+          <Image
+            src={utilsImages.avatar}
+            alt=""
+            width={420}
+            height={420}
+            className="h-[420px] w-[420px]"
+          />
+
+          <div
+            style={{
+              backgroundImage: `url(${backgroundImage.cardHorizontal.src})`,
+            }}
+            className="flex flex-col justify-center items-center -mt-px -ml-px bg-cover 
+            md:py-14 md:px-14 
+            lg:py-14 lg:px-14"
+          >
+            <Text
+              tag="h1"
+              preset="heading_sm"
+              className="text-zinc-950 text-center mb-8"
+              isBold
+            >
+              Conheça o Especialista
+            </Text>
+
+            <Text
+              tag="p"
+              preset="small"
+              className="text-zinc-950 mb-8 text-justify"
+              isMedium
+            >
+              Sou Wanessa Lopes, advogada, especialista em direito do
+              consumidor. Me especializei em toda parte jurídica que envolva
+              relação de consumo. Nosso escritório atua em problemas com
+              telefonia, bancos, energia elétrica, negativações indevidas,
+              dentre outros. <br />
+              <br />
+              Sou sócia-proprietária e possuo uma equipe especializada em
+              Direito do Consumidor com atendimento online e presencial em todo
+              o Brasil.
+            </Text>
+
+            <Button title="Quero Atendimento Agora" />
+          </div>
+        </div>
       </Section>
     </div>
   );
