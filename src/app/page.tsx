@@ -1,4 +1,11 @@
-import { Button, FlowOfWork, Section, ServiceCard, Text } from "@/components";
+import {
+  Button,
+  FlowOfWork,
+  Section,
+  ServiceCard,
+  Text,
+  serviceCardToMap,
+} from "@/components";
 
 export default function Home() {
   return (
@@ -36,20 +43,9 @@ export default function Home() {
         </Text>
 
         <div className="grid grid-cols-2 w-full gap-4">
-          <ServiceCard />
-          <ServiceCard />
-
-          <ServiceCard />
-          <ServiceCard />
-
-          <ServiceCard />
-          <ServiceCard />
-
-          <ServiceCard />
-          <ServiceCard />
-
-          <ServiceCard />
-          <ServiceCard />
+          {serviceCardToMap.map((card) => (
+            <ServiceCard key={card.description} {...card} />
+          ))}
         </div>
       </Section>
 
