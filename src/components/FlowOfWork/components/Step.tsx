@@ -15,7 +15,7 @@ export function Step({ onClick, description, iconName, title }: StepProps) {
       style={{
         backgroundImage: `url(${backgroundImage.cardHorizontal.src})`,
       }}
-      className="flex flex-1 flex-col bg-cover bg-no-repeat h-[450px]  items-center px-10 text-center gap-4 pt-20"
+      className="flex flex-1 flex-col bg-cover bg-no-repeat h-[450px]  items-center px-10 text-center gap-4 pt-20 "
     >
       <Icon iconName={iconName} className="mb-5" size={50} />
 
@@ -27,7 +27,13 @@ export function Step({ onClick, description, iconName, title }: StepProps) {
         {description}
       </Text>
 
-      {onClick && <Button title="Agendar Atendimento" onClick={onClick} />}
+      {onClick && (
+        <Button
+          className="w-full"
+          title="Agendar Atendimento"
+          onClick={onClick}
+        />
+      )}
     </div>
   );
 }

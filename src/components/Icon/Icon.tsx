@@ -13,6 +13,9 @@ import { TfiWrite } from "react-icons/tfi";
 import { PiDrop } from "react-icons/pi";
 import { RiBankLine } from "react-icons/ri";
 import { RiHealthBookLine } from "react-icons/ri";
+import { FaHandshake } from "react-icons/fa6";
+import { MdSettingsInputAntenna } from "react-icons/md";
+import { BsClockHistory } from "react-icons/bs";
 
 export type IconNames =
   | "ouvimos"
@@ -27,7 +30,10 @@ export type IconNames =
   | "multasIndevidas"
   | "corteOuAtraso"
   | "problemasBancários"
-  | "problemasSaúde";
+  | "problemasSaúde"
+  | "confiança"
+  | "conectividade"
+  | "agilidade";
 
 export interface IconProps extends IconBaseProps {
   iconName: IconNames;
@@ -58,4 +64,7 @@ const iconMap: Record<IconNames, IconType> = {
   corteOuAtraso: PiDrop,
   problemasBancários: RiBankLine,
   problemasSaúde: RiHealthBookLine,
+  confiança: FaHandshake,
+  conectividade: MdSettingsInputAntenna,
+  agilidade: BsClockHistory,
 };

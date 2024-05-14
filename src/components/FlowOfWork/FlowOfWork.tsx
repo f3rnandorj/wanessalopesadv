@@ -45,19 +45,22 @@ const stepDataToMap: Record<Flow, StepProps[]> = {
   ],
   second: [
     {
-      title: "",
-      description: "",
-      iconName: "atuamos",
+      title: "CONFIANÇA",
+      description:
+        "Equipe especializada no assunto. Garantimos que sua demanda estará em ótimas mãos.",
+      iconName: "confiança",
     },
     {
-      title: "",
-      description: "",
-      iconName: "atuamos",
+      title: "CONECTIVIDADE",
+      description:
+        "Atendemos a todo o Brasil  virtual e presencial. Terá nosso suporte até o desfecho do caso.",
+      iconName: "conectividade",
     },
     {
-      title: "",
-      description: "",
-      iconName: "atuamos",
+      title: "AGILIDADE",
+      description:
+        "Estamos prontos pra te atender com a maior agilidade possível, porque entendemos que a urgência faz parte do nosso negócio.",
+      iconName: "agilidade",
     },
   ],
 };

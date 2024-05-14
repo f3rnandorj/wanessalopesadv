@@ -5,7 +5,10 @@ import {
   ServiceCard,
   Text,
   serviceCardToMap,
+  Image,
 } from "@/components";
+
+import { evidences } from "@/assets";
 
 export default function Home() {
   return (
@@ -62,7 +65,30 @@ export default function Home() {
       </Section>
 
       <Section>
-        <div className="h-screen"></div>
+        <Text
+          tag="p"
+          preset="heading_sm"
+          className="text-zinc-50 text-center mb-8"
+        >
+          O Atendimento é Pautado em Três Pilares:
+        </Text>
+
+        <FlowOfWork flow="second" />
+      </Section>
+
+      <Section>
+        <Text
+          tag="p"
+          preset="heading_sm"
+          className="text-zinc-50 text-center mb-8"
+        >
+          A Opinião de Nossos Clientes
+        </Text>
+
+        <Image src={evidences.evidence} alt="" />
+        <Image src={evidences.evidence1} alt="" />
+        <Image src={evidences.evidence2} alt="" />
+        <Image src={evidences.evidence3} alt="" />
       </Section>
     </div>
   );
