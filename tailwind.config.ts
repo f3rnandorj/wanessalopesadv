@@ -24,6 +24,12 @@ const config: Config = {
           backgroundColor: "rgb(244 244 245 / var(--tw-bg-opacity))",
           color: "rgb(9 9 11 / var(--tw-text-opacity))",
         },
+        ".custom-mb": {
+          marginBottom: "1rem",
+          "@media(min-width: 640px)": {
+            marginBottom: "2.5rem",
+          },
+        },
       });
     }),
   ],

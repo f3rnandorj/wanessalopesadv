@@ -16,4 +16,13 @@
     background-color: theme("backgroundColor.zinc.100");
     color: theme("textColor.zinc.950");
   }
+
+  .custom-mb {
+    margin-bottom: theme("margin.4");
+  }
+  @media (min-width: 640px) {
+    .custom-mb {
+      margin-bottom: theme("margin.10");
+    }
+  }
 }

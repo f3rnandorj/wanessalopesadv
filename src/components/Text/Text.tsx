@@ -76,6 +76,8 @@ export function Text({
   );
 }
 
+type TextVariants = "paragraph" | "heading" | "heading_sm" | "small" | "button";
+
 function getFontHeight(preset: TextVariants) {
   switch (true) {
     case preset === "heading":
@@ -107,8 +109,6 @@ function getFontWeight(isMedium: boolean, isBold: boolean) {
       return "font-normal";
   }
 }
-
-type TextVariants = "paragraph" | "heading" | "heading_sm" | "small" | "button";
 
 export const $fontSizeStyles: Record<TextVariants, string> = {
   heading: " lg:text-6xl text-3xl",

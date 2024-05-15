@@ -18,18 +18,27 @@ export default function Home() {
           preset="heading"
           tag="h1"
           isBold
-          className="text-zinc-50 text-center mb-10"
+          className="text-zinc-50 text-center custom-mb"
         >
           Precisa de um Especialista em <br />
           Direito do Consumidor?
         </Text>
 
-        <Text tag="p" className="text-zinc-300 text-center mb-10">
+        <Text tag="p" className="text-zinc-300 text-center custom-mb">
           Bem vindo (a)! Se você está com problema em qualquer relação de
           consumo, você está no lugar certo!
-          <br />
-          <br /> Eu sou a Wanessa Lopes, advogada, especialista em Direito do
-          Consumidor. <br />
+        </Text>
+
+        <Text tag="p" className="text-zinc-300 text-center custom-mb">
+          Eu sou a Wanessa Lopes, advogada, especialista em Direito do
+          Consumidor.
+        </Text>
+
+        <Text
+          tag="p"
+          className="text-zinc-300 text-center custom-mb 
+          lg:-mt-10"
+        >
           Como posso te ajudar?
         </Text>
 
@@ -40,7 +49,7 @@ export default function Home() {
         <Text
           tag="p"
           preset="heading_sm"
-          className="text-zinc-50 text-center mb-8"
+          className="text-zinc-50 text-center custom-mb"
         >
           Um Pouco de Nossos Serviços
         </Text>
@@ -56,7 +65,7 @@ export default function Home() {
         <Text
           tag="p"
           preset="heading_sm"
-          className="text-zinc-50 text-center mb-8"
+          className="text-zinc-50 text-center custom-mb"
         >
           Entenda Como Trabalhamos
         </Text>
@@ -68,7 +77,7 @@ export default function Home() {
         <Text
           tag="p"
           preset="heading_sm"
-          className="text-zinc-50 text-center mb-8"
+          className="text-zinc-50 text-center custom-mb"
         >
           O Atendimento é Pautado em Três Pilares:
         </Text>
@@ -80,12 +89,12 @@ export default function Home() {
         <Text
           tag="p"
           preset="heading_sm"
-          className="text-zinc-50 text-center mb-8"
+          className="text-zinc-50 text-center custom-mb"
         >
           A Opinião de Nossos Clientes
         </Text>
 
-        <div className="grid grid-cols-2 gap-4 mb-8 max-w-[90%]">
+        <div className="grid grid-cols-2 gap-4 custom-mb max-w-[90%]">
           <Image src={evidences.evidence} alt="" className="w-full h-full" />
           <Image src={evidences.evidence2} alt="" className="w-full h-full" />
           <Image src={evidences.evidence1} alt="" className="w-full h-full" />
@@ -116,7 +125,7 @@ export default function Home() {
             <Text
               tag="h1"
               preset="heading_sm"
-              className="text-zinc-950 text-center mb-8"
+              className="text-zinc-950 text-center custom-mb"
               isBold
             >
               Conheça o Especialista
@@ -125,7 +134,7 @@ export default function Home() {
             <Text
               tag="p"
               preset="small"
-              className="text-zinc-950 mb-8 text-justify"
+              className="text-zinc-950 custom-mb text-justify"
               isMedium
             >
               Sou Wanessa Lopes, advogada, especialista em direito do
