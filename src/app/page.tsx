@@ -1,11 +1,11 @@
 import {
-  Button,
   FlowOfWork,
   Section,
   ServiceCard,
   Text,
   serviceCardToMap,
   Image,
+  Button,
 } from "@/components";
 
 import { backgroundImage, evidences, utilsImages } from "@/assets";
@@ -36,7 +36,7 @@ export default function Home() {
         <Button title="Quero Atendimento" />
       </Section>
 
-      <Section>
+      <Section id="our_services">
         <Text
           tag="p"
           preset="heading_sm"
@@ -52,7 +52,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section>
+      <Section id="how_we_act">
         <Text
           tag="p"
           preset="heading_sm"
@@ -95,7 +95,7 @@ export default function Home() {
         <Button title="Quero Atendimento Agora" />
       </Section>
 
-      <Section>
+      <Section id="who_i_am">
         <div className="flex h-[420px]">
           <Image
             src={utilsImages.avatar}

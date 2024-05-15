@@ -1,6 +1,8 @@
-import { backgroundImage, utilsImages } from "@/assets";
-import { Image, Text } from "@/components";
+"use client";
 
+import { backgroundImage, utilsImages } from "@/assets";
+import { Image } from "@/components";
+import { SwipeButton, swipeButtonDataToMap } from "./components/SwipeButton";
 export function NavBar() {
   return (
     <nav
@@ -28,33 +30,3 @@ export function NavBar() {
     </nav>
   );
 }
-
-interface SwipeButtonProps {
-  title: string;
-}
-
-function SwipeButton({ title }: SwipeButtonProps) {
-  //TODO: implement SwipeButton functionality
-
-  return (
-    <button
-      className={`bg-zinc-950 py-1.5 px-2  border-zinc-950 border-[1px] text-zinc-300 hover:button-hover`}
-    >
-      <Text id={title} preset="small">
-        {title}
-      </Text>
-    </button>
-  );
-}
-
-const swipeButtonDataToMap: SwipeButtonProps[] = [
-  {
-    title: "Quem sou",
-  },
-  {
-    title: "Como atuamos",
-  },
-  {
-    title: "Nossos serviços",
-  },
-];
