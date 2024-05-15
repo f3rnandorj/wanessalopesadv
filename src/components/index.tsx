@@ -7,3 +7,4 @@ export * from "./Button/Button";
 export * from "./Icon/Icon";
 export * from "./ServiceCard/ServiceCard";
 export * from "./FlowOfWork/FlowOfWork";
+export * from "./FloatingButton/FloatingButton";

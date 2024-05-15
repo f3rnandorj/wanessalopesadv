@@ -16,6 +16,7 @@ import { RiHealthBookLine } from "react-icons/ri";
 import { FaHandshake } from "react-icons/fa6";
 import { MdSettingsInputAntenna } from "react-icons/md";
 import { BsClockHistory } from "react-icons/bs";
+import { RiWhatsappFill } from "react-icons/ri";
 
 export type IconNames =
   | "ouvimos"
@@ -33,7 +34,8 @@ export type IconNames =
   | "problemasSaúde"
   | "confiança"
   | "conectividade"
-  | "agilidade";
+  | "agilidade"
+  | "whatsApp";
 
 export interface IconProps extends IconBaseProps {
   iconName: IconNames;
@@ -67,4 +69,5 @@ const iconMap: Record<IconNames, IconType> = {
   confiança: FaHandshake,
   conectividade: MdSettingsInputAntenna,
   agilidade: BsClockHistory,
+  whatsApp: RiWhatsappFill,
 };
