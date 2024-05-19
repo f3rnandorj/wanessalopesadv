@@ -111,9 +111,9 @@ function getFontWeight(isMedium: boolean, isBold: boolean) {
 }
 
 export const $fontSizeStyles: Record<TextVariants, string> = {
-  heading: " lg:text-6xl text-3xl",
-  heading_sm: "lg:text-2xl text-xl",
+  heading: " lg:text-6xl md:text-6xl text-3xl",
+  heading_sm: "lg:text-2xl md:text-2xl text-xl",
   paragraph: "lg:text-[1.25rem]",
   small: "text-base",
-  button: "text-base",
+  button: "lg:text-base text-sm",
 };

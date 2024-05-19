@@ -14,15 +14,22 @@ export function ServiceCard({ description, iconName }: ServiceCardProps) {
       style={{
         backgroundImage: `url(${backgroundImage.cardVertical.src})`,
       }}
-      className="flex flex-col bg-cover bg-no-repeat h-[300px] items-center justify-evenly px-4"
+      className="flex flex-col bg-cover bg-no-repeat text-center items-center justify-between px-2 min-h-52
+      md:px-4 md:justify-evenly md:h-[300px]
+      lg:px-4 lg:justify-evenly lg:h-[300px]"
     >
-      <Icon iconName={iconName} />
+      <Icon
+        iconName={iconName}
+        className="mt-4 mb-4
+        md:mt-0
+        lg:mt-0"
+      />
 
-      <Text preset="heading_sm" isMedium>
+      <Text tag="p" preset="heading_sm" isMedium className="mb-4 text-base">
         {description}
       </Text>
 
-      <Button title="Quero atendimento" preset="outline" />
+      <Button title="Quero atendimento" preset="outline" className="-mx-2" />
     </div>
   );
 }

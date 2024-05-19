@@ -20,7 +20,7 @@ export default function Home() {
           isBold
           className="text-zinc-50 text-center custom-mb"
         >
-          Precisa de um Especialista em <br />
+          Precisa de Especialista em <br />
           Direito do Consumidor?
         </Text>
 
