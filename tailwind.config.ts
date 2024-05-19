@@ -15,6 +15,12 @@ const config: Config = {
       boxShadow: {
         button: "0px 0px 30px rgba(0, 0, 0, 0.2);",
       },
+      margin: {
+        appMarginHorizontal: "1.5rem",
+      },
+      padding: {
+        appPaddingHorizontal: "1.5rem",
+      },
     },
   },
   plugins: [

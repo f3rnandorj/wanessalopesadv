@@ -39,17 +39,26 @@ export type IconNames =
 
 export interface IconProps extends IconBaseProps {
   iconName: IconNames;
+  className?: string;
 }
 
 export function Icon({
   iconName,
   size = 40,
   onClick,
+  className,
   ...iconProps
 }: IconProps) {
   const IconComponent = iconMap[iconName];
 
-  return <IconComponent onClick={onClick} size={size} {...iconProps} />;
+  return (
+    <IconComponent
+      className={className}
+      onClick={onClick}
+      size={size}
+      {...iconProps}
+    />
+  );
 }
 
 const iconMap: Record<IconNames, IconType> = {

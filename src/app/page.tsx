@@ -1,3 +1,5 @@
+import { GetServerSidePropsContext, InferGetServerSidePropsType } from "next";
+import { backgroundImage, evidences, utilsImages } from "@/assets";
 import {
   FlowOfWork,
   Section,
@@ -8,12 +10,10 @@ import {
   Button,
 } from "@/components";
 
-import { backgroundImage, evidences, utilsImages } from "@/assets";
-
 export default function Home() {
   return (
     <div className="flex flex-1 flex-col">
-      <Section className="order-0 lg:order-none">
+      <Section>
         <Text
           preset="heading"
           tag="h1"
@@ -45,7 +45,7 @@ export default function Home() {
         <Button title="Quero Atendimento" />
       </Section>
 
-      <Section id="our_services" className="order-2 lg:order-none">
+      <Section id="our_services">
         <Text
           tag="p"
           preset="heading_sm"
@@ -61,7 +61,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section id="how_we_act" className="order-1 lg:order-none">
+      <Section id="how_we_act">
         <Text
           tag="p"
           preset="heading_sm"
@@ -73,7 +73,7 @@ export default function Home() {
         <FlowOfWork flow="first" />
       </Section>
 
-      <Section className="order-3 lg:order-none">
+      <Section>
         <Text
           tag="p"
           preset="heading_sm"
@@ -85,7 +85,7 @@ export default function Home() {
         <FlowOfWork flow="second" />
       </Section>
 
-      <Section className="order-4 lg:order-none">
+      <Section>
         <Text
           tag="p"
           preset="heading_sm"
@@ -104,7 +104,7 @@ export default function Home() {
         <Button title="Quero Atendimento Agora" />
       </Section>
 
-      <Section id="who_i_am" className="order-5 lg:order-none">
+      <Section id="who_i_am">
         <div className="flex h-[420px]">
           <Image
             src={utilsImages.avatar}

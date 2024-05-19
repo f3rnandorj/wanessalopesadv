@@ -1,1 +1,1 @@
-export * from "./useIsMobileDevice";
+export * from "./useWindowSize";

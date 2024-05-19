@@ -1,6 +1,8 @@
 "use client";
 
+import { useWindowSize } from "@/hooks";
 import { Step, StepProps } from "./components/Step";
+import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 
 type Flow = "first" | "second";
 interface FlowOfWorkProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -8,11 +10,22 @@ interface FlowOfWorkProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 export function FlowOfWork({ flow, className, ...divProps }: FlowOfWorkProps) {
-  const dataToMap = stepDataToMap[flow];
+  const { width } = useWindowSize();
+
+  const stepsData = stepDataToMap[flow];
+  const sortedStepsData = [...stepsData].sort((a, b) => (a.onClick ? 1 : -1));
+
+  const stepsToMap = width && width >= 640 ? stepsData : sortedStepsData;
 
   return (
-    <div className={`${className} flex flex-1 `} {...divProps}>
-      {dataToMap.map((step) => (
+    <div
+      className={` -mx-appMarginHorizontal
+      md:flex md:flex-1
+      lg:flex lg:flex-1
+      ${className}`}
+      {...divProps}
+    >
+      {stepsToMap.map((step) => (
         <div key={step.title} className="flex flex-1">
           <Step {...step} />
         </div>

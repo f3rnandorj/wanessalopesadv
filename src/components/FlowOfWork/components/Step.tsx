@@ -15,7 +15,9 @@ export function Step({ onClick, description, iconName, title }: StepProps) {
       style={{
         backgroundImage: `url(${backgroundImage.cardHorizontal.src})`,
       }}
-      className="flex flex-1 flex-col bg-cover bg-no-repeat h-[450px]  items-center px-10 text-center gap-4 pt-20 "
+      className={`flex flex-1 flex-col bg-cover bg-no-repeat items-center px-10 py-10 text-center gap-4 -mt-1
+      md:pt-20 md:h-[450px] md:py-0 
+      lg:pt-20 lg:h-[450px] lg:py-0 `}
     >
       <Icon iconName={iconName} className="mb-5" size={50} />
 
