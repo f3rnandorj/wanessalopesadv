@@ -1,4 +1,3 @@
-import { GetServerSidePropsContext, InferGetServerSidePropsType } from "next";
 import { backgroundImage, evidences, utilsImages } from "@/assets";
 import {
   FlowOfWork,
@@ -8,13 +7,16 @@ import {
   serviceCardToMap,
   Image,
   Button,
+  Icon,
 } from "@/components";
+import { SocialMedias } from "@/components/SocialMedias/SocialMedias";
 
 export default function Home() {
   return (
     <div className="flex flex-1 flex-col">
       <Section>
         <Text
+          id="Precisa de Especialista"
           preset="heading"
           tag="h1"
           isBold
@@ -24,17 +26,26 @@ export default function Home() {
           Direito do Consumidor?
         </Text>
 
-        <Text tag="p" className="text-zinc-300 text-center custom-mb">
+        <Text
+          id="Bem vindo"
+          tag="p"
+          className="text-zinc-300 text-center custom-mb"
+        >
           Bem vindo (a)! Se você está com problema em qualquer relação de
           consumo, você está no lugar certo!
         </Text>
 
-        <Text tag="p" className="text-zinc-300 text-center custom-mb">
+        <Text
+          id="Eu sou a Wanessa Lopes"
+          tag="p"
+          className="text-zinc-300 text-center custom-mb"
+        >
           Eu sou a Wanessa Lopes, advogada, especialista em Direito do
           Consumidor.
         </Text>
 
         <Text
+          id="Como posso te ajudar?"
           tag="p"
           className="text-zinc-300 text-center custom-mb 
           lg:-mt-10"
@@ -47,6 +58,7 @@ export default function Home() {
 
       <Section id="our_services">
         <Text
+          id="Um Pouco de Nossos Serviços"
           tag="p"
           preset="heading_sm"
           className="text-zinc-50 text-center custom-mb"
@@ -63,6 +75,7 @@ export default function Home() {
 
       <Section id="how_we_act">
         <Text
+          id="Entenda Como Trabalhamos"
           tag="p"
           preset="heading_sm"
           className="text-zinc-50 text-center custom-mb"
@@ -75,6 +88,7 @@ export default function Home() {
 
       <Section>
         <Text
+          id="O Atendimento é Pautado em Três Pilares:"
           tag="p"
           preset="heading_sm"
           className="text-zinc-50 text-center custom-mb"
@@ -87,6 +101,7 @@ export default function Home() {
 
       <Section>
         <Text
+          id="A Opinião de Nossos Clientes"
           tag="p"
           preset="heading_sm"
           className="text-zinc-50 text-center custom-mb"
@@ -115,6 +130,7 @@ export default function Home() {
           lg:flex-row lg:h-[420px]"
         >
           <Text
+            id="Conheça o Especialista"
             tag="h1"
             preset="heading_sm"
             className="text-zinc-300 text-center custom-mb 
@@ -144,6 +160,7 @@ export default function Home() {
             lg:py-14 lg:px-14 "
           >
             <Text
+              id="Conheça o Especialista"
               tag="h1"
               preset="heading_sm"
               className="text-zinc-950 text-center custom-mb hidden
@@ -155,6 +172,7 @@ export default function Home() {
             </Text>
 
             <Text
+              id="professional description"
               tag="p"
               preset="small"
               className="text-zinc-950 custom-mb text-justify"
@@ -174,6 +192,61 @@ export default function Home() {
             <Button title="Quero Atendimento Agora" className="custom-mb" />
           </div>
         </div>
+      </Section>
+
+      <Section className="text-zinc-300 text-center ">
+        <Text
+          id="Nossos contatos"
+          tag="h1"
+          preset="heading_sm"
+          className="text-zinc-300 text-center custom-mb "
+        >
+          Nossos contatos
+        </Text>
+
+        <div
+          className="grid grid-cols-1 gap-4 mb-10
+          md:grid md:grid-cols-2 md:gap-40
+          lg:grid lg:grid-cols-2 lg:gap-40
+        "
+        >
+          <div className="w-full space-y-4">
+            <div className="flex items-center gap-4">
+              <Icon iconName="location" color="#991B1B" />
+              <Text id="Escritório localizado" tag="p">
+                Escritório localizado no Rio de Janeiro
+              </Text>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <Icon iconName="call" color="#991B1B" />
+              <Text id="982180065" tag="p">
+                (21) 982180065
+              </Text>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <Icon iconName="mail" color="#991B1B" />
+              <Text id="advwanessalopes" tag="p">
+                advwanessalopes@gmail.com
+              </Text>
+            </div>
+          </div>
+
+          <div>
+            <SocialMedias />
+          </div>
+        </div>
+
+        <Text tag="p" className="text-xs custom-mb">
+          Este site está protegido pela Lei de Direitos Autorais (Lei 9610 de
+          19/02/1998). Sua reprodução total ou parcial é proibida nos termos da
+          Lei.
+        </Text>
+
+        <Text tag="p" className="text-xs">
+          Developed by Fernando Henrique Dev
+        </Text>
       </Section>
     </div>
   );

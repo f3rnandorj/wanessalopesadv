@@ -17,6 +17,9 @@ import { FaHandshake } from "react-icons/fa6";
 import { MdSettingsInputAntenna } from "react-icons/md";
 import { BsClockHistory } from "react-icons/bs";
 import { RiWhatsappFill } from "react-icons/ri";
+import { IoLocationSharp } from "react-icons/io5";
+import { IoCallSharp } from "react-icons/io5";
+import { IoIosMail } from "react-icons/io";
 
 export type IconNames =
   | "ouvimos"
@@ -35,7 +38,10 @@ export type IconNames =
   | "confiança"
   | "conectividade"
   | "agilidade"
-  | "whatsApp";
+  | "whatsApp"
+  | "location"
+  | "call"
+  | "mail";
 
 export interface IconProps extends IconBaseProps {
   iconName: IconNames;
@@ -79,4 +85,7 @@ const iconMap: Record<IconNames, IconType> = {
   conectividade: MdSettingsInputAntenna,
   agilidade: BsClockHistory,
   whatsApp: RiWhatsappFill,
+  location: IoLocationSharp,
+  call: IoCallSharp,
+  mail: IoIosMail,
 };
