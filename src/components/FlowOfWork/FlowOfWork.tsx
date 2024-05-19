@@ -19,7 +19,7 @@ export function FlowOfWork({ flow, className, ...divProps }: FlowOfWorkProps) {
 
   return (
     <div
-      className={` -mx-appMarginHorizontal
+      className={` 
       md:flex md:flex-1
       lg:flex lg:flex-1
       ${className}`}

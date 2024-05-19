@@ -95,11 +95,11 @@ export default function Home() {
         </Text>
 
         <div
-          className="grid grid-cols-1 gap-4 custom-mb max-w-[90%]
+          className="grid grid-cols-1 gap-4 custom-mb 
           md:grid md:grid-cols-2
           lg:grid lg:grid-cols-2"
         >
-          <Image src={evidences.evidence} alt="" className="w-full h-full" />
+          <Image src={evidences.evidence} alt="" className="w-full h-full " />
           <Image src={evidences.evidence2} alt="" className="w-full h-full" />
           <Image src={evidences.evidence1} alt="" className="w-full h-full" />
           <Image src={evidences.evidence3} alt="" className="w-full h-full" />
@@ -108,28 +108,47 @@ export default function Home() {
         <Button title="Quero Atendimento Agora" />
       </Section>
 
-      <Section id="who_i_am">
-        <div className="flex h-[420px]">
+      <Section id="who_i_am" className="">
+        <div
+          className="flex flex-col 
+          md:flex-row md:h-[420px]
+          lg:flex-row lg:h-[420px]"
+        >
+          <Text
+            tag="h1"
+            preset="heading_sm"
+            className="text-zinc-300 text-center custom-mb 
+            md:hidden
+            lg:hidden"
+            isBold
+          >
+            Conheça o Especialista
+          </Text>
+
           <Image
             src={utilsImages.avatar}
             alt=""
             width={420}
             height={420}
-            className="h-[420px] w-[420px]"
+            className=" bg-cover self-center 
+            md:h-[420px] md:w-[420px]
+            lg:h-[420px] lg:w-[420px]"
           />
 
           <div
             style={{
               backgroundImage: `url(${backgroundImage.cardHorizontal.src})`,
             }}
-            className="flex flex-col justify-center items-center -mt-px -ml-px bg-cover 
-            md:py-14 md:px-14 
-            lg:py-14 lg:px-14"
+            className="flex flex-col justify-center items-center -mt-px -ml-px bg-cover px-4 pt-4 
+            md:py-10 md:px-10 
+            lg:py-14 lg:px-14 "
           >
             <Text
               tag="h1"
               preset="heading_sm"
-              className="text-zinc-950 text-center custom-mb"
+              className="text-zinc-950 text-center custom-mb hidden
+              md:block
+              lg:block"
               isBold
             >
               Conheça o Especialista
@@ -152,7 +171,7 @@ export default function Home() {
               o Brasil.
             </Text>
 
-            <Button title="Quero Atendimento Agora" />
+            <Button title="Quero Atendimento Agora" className="custom-mb" />
           </div>
         </div>
       </Section>

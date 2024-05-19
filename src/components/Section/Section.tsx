@@ -15,7 +15,7 @@ export function Section({ className, ...divProps }: SectionProps) {
       style={{
         backgroundImage: `url(${backgroundImage.section.src})`,
       }}
-      className={`-mt-1.5 -ml-1.5 bg-cover py-6
+      className={`-mt-1.5 -ml-1.5 -mr-1.5 bg-cover py-6
       lg:py-0 ${className}`}
     >
       <div {...divProps} className={styles.sectionContainer} />
