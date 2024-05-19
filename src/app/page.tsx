@@ -21,6 +21,7 @@ export default function Home() {
           tag="h1"
           isBold
           className="text-zinc-50 text-center custom-mb"
+          isTopScreen
         >
           Precisa de Especialista em <br />
           Direito do Consumidor?
@@ -30,6 +31,7 @@ export default function Home() {
           id="Bem vindo"
           tag="p"
           className="text-zinc-300 text-center custom-mb"
+          isTopScreen
         >
           Bem vindo (a)! Se você está com problema em qualquer relação de
           consumo, você está no lugar certo!
@@ -39,6 +41,7 @@ export default function Home() {
           id="Eu sou a Wanessa Lopes"
           tag="p"
           className="text-zinc-300 text-center custom-mb"
+          isTopScreen
         >
           Eu sou a Wanessa Lopes, advogada, especialista em Direito do
           Consumidor.
@@ -49,6 +52,7 @@ export default function Home() {
           tag="p"
           className="text-zinc-300 text-center custom-mb 
           lg:-mt-10"
+          isTopScreen
         >
           Como posso te ajudar?
         </Text>
@@ -62,6 +66,7 @@ export default function Home() {
           tag="p"
           preset="heading_sm"
           className="text-zinc-50 text-center custom-mb"
+          isTopScreen
         >
           Um Pouco de Nossos Serviços
         </Text>

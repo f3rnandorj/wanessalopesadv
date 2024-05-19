@@ -7,6 +7,7 @@ import React, {
   useState,
 } from "react";
 import { motion } from "framer-motion";
+import { useCurrentWindowScroll } from "@/hooks";
 
 type TextHTMLElement = DetailedHTMLProps<
   HTMLAttributes<HTMLElement>,
@@ -24,7 +25,7 @@ interface TextProps extends HTMLAdaptedProps {
   className?: string;
   isMedium?: boolean;
   isBold?: boolean;
-  isInitialVisible?: boolean;
+  isTopScreen?: boolean;
 }
 
 export function Text({
@@ -35,31 +36,16 @@ export function Text({
   isBold = false,
   isMedium = false,
   children,
-  isInitialVisible = false,
+  isTopScreen = false,
   ...textProps
 }: TextProps) {
-  const [isVisible, setIsVisible] = useState(isInitialVisible);
+  const { isVisible } = useCurrentWindowScroll(id, isTopScreen);
 
   const Tag = tag as keyof JSX.IntrinsicElements;
 
   const fontSize = $fontSizeStyles[preset];
   const fontWeight = getFontWeight(isMedium, isBold);
   const fontHeight = getFontHeight(preset);
-
-  useEffect(() => {
-    if (!id) return;
-
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY + window.innerHeight;
-      const elementPosition = document.getElementById(id)?.offsetTop || 0;
-      if (scrollPosition > elementPosition) {
-        setIsVisible(true);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [id]);
 
   return (
     <motion.text
