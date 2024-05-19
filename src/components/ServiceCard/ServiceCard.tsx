@@ -14,7 +14,7 @@ export function ServiceCard({ description, iconName }: ServiceCardProps) {
       style={{
         backgroundImage: `url(${backgroundImage.cardVertical.src})`,
       }}
-      className="flex flex-col bg-cover bg-no-repeat text-center items-center justify-between px-2 min-h-52
+      className="flex flex-col bg-cover bg-no-repeat text-center items-center justify-between px-2 min-h-52 w-full
       md:px-4 md:justify-evenly md:h-[300px]
       lg:px-4 lg:justify-evenly lg:h-[300px]"
     >
@@ -29,7 +29,11 @@ export function ServiceCard({ description, iconName }: ServiceCardProps) {
         {description}
       </Text>
 
-      <Button title="Quero atendimento" preset="outline" className="-mx-2" />
+      <Button
+        title="Quero atendimento"
+        preset="outline"
+        className="-mx-2 mb-2"
+      />
     </div>
   );
 }

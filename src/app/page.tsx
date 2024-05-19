@@ -130,7 +130,7 @@ export default function Home() {
             alt=""
             width={420}
             height={420}
-            className=" bg-cover self-center 
+            className=" w-full self-center 
             md:h-[420px] md:w-[420px]
             lg:h-[420px] lg:w-[420px]"
           />
