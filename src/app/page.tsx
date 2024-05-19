@@ -94,7 +94,11 @@ export default function Home() {
           A Opinião de Nossos Clientes
         </Text>
 
-        <div className="grid grid-cols-2 gap-4 custom-mb max-w-[90%]">
+        <div
+          className="grid grid-cols-1 gap-4 custom-mb max-w-[90%]
+          md:grid md:grid-cols-2
+          lg:grid lg:grid-cols-2"
+        >
           <Image src={evidences.evidence} alt="" className="w-full h-full" />
           <Image src={evidences.evidence2} alt="" className="w-full h-full" />
           <Image src={evidences.evidence1} alt="" className="w-full h-full" />
