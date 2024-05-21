@@ -46,7 +46,7 @@ export function Button({
   if (isLink) {
     return (
       <button className={`${buttonStyle}`}>
-        <Link href={hrefToWpp}>
+        <Link href={hrefToWpp} about="Fale conosco">
           <Text preset="button">{title}</Text>
         </Link>
       </button>

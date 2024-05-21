@@ -1,7 +1,7 @@
-import cardVertical from "./cardVertical.png";
-import cardHorizontal from "./cardHorizontal.png";
-import header from "./header.png";
-import section from "./section.png";
+import cardVertical from "./cardVertical.webp";
+import cardHorizontal from "./cardHorizontal.webp";
+import header from "./header.webp";
+import section from "./section.webp";
 
 export const backgroundImage = {
   cardVertical,

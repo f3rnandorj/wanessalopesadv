@@ -114,7 +114,7 @@ export default function Home() {
           md:grid md:grid-cols-2
           lg:grid lg:grid-cols-2"
         >
-          <Image src={evidences.evidence} alt="" className="w-full h-full " />
+          <Image src={evidences.evidence} alt="" className="w-full h-full" />
           <Image src={evidences.evidence2} alt="" className="w-full h-full" />
           <Image src={evidences.evidence1} alt="" className="w-full h-full" />
           <Image src={evidences.evidence3} alt="" className="w-full h-full" />
