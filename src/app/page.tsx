@@ -2,12 +2,11 @@ import { backgroundImage, evidences, utilsImages } from "@/assets";
 import {
   FlowOfWork,
   Section,
-  ServiceCard,
   Text,
-  serviceCardToMap,
   Image,
   Button,
   Icon,
+  ServiceList,
 } from "@/components";
 import { SocialMedias } from "@/components/SocialMedias/SocialMedias";
 
@@ -71,11 +70,7 @@ export default function Home() {
           Um Pouco de Nossos Serviços
         </Text>
 
-        <div className="grid grid-cols-2 w-full gap-4">
-          {serviceCardToMap.map((card) => (
-            <ServiceCard key={card.description} {...card} />
-          ))}
-        </div>
+        <ServiceList />
       </Section>
 
       <Section id="how_we_act">

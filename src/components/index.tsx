@@ -5,6 +5,6 @@ export * from "./IFrameVideo/IframeVideo";
 export * from "./Section/Section";
 export * from "./Button/Button";
 export * from "./Icon/Icon";
-export * from "./ServiceCard/ServiceCard";
+export * from "./ServiceList/ServiceList";
 export * from "./FlowOfWork/FlowOfWork";
 export * from "./FloatingButton/FloatingButton";

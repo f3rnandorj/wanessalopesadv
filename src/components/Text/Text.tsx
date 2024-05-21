@@ -1,11 +1,6 @@
 "use client";
 
-import React, {
-  DetailedHTMLProps,
-  HTMLAttributes,
-  useEffect,
-  useState,
-} from "react";
+import React, { DetailedHTMLProps, HTMLAttributes } from "react";
 import { motion } from "framer-motion";
 import { useCurrentWindowScroll } from "@/hooks";
 
