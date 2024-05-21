@@ -2,7 +2,6 @@
 
 import { useWindowSize } from "@/hooks";
 import { Step, StepProps } from "./components/Step";
-import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 
 type Flow = "first" | "second";
 interface FlowOfWorkProps extends React.HTMLAttributes<HTMLDivElement> {

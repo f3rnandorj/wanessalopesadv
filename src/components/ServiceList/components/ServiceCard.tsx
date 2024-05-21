@@ -43,11 +43,7 @@ export function ServiceCard({ id, description, iconName }: ServiceCardProps) {
         {description}
       </Text>
 
-      <Button
-        title="Quero atendimento"
-        preset="outline"
-        className="-mx-2 mb-2"
-      />
+      <Button title="Quero atendimento" preset="outline" className="mb-2" />
     </motion.div>
   );
 }

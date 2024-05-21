@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { Text } from "../Text/Text";
 
 type ButtonVariants = "defaultMain" | "outline";
@@ -33,7 +32,7 @@ export function Button({
       `,
       },
       outline: {
-        container: `min-h-12 bg-zinc-100 px-8 text-zinc-950 hover:button-hover
+        container: `min-h-12 w-full bg-zinc-100 mx-2 text-zinc-950 hover:button-hover
         shadow-zinc-950 shadow-button hover:shadow-none hover:border-zinc-950 hover:border-[1px] 
         ${className}
       `,
@@ -46,9 +45,9 @@ export function Button({
   if (isLink) {
     return (
       <button className={`${buttonStyle}`}>
-        <Link href={hrefToWpp} about="Fale conosco">
+        <a href={hrefToWpp} about="Fale conosco">
           <Text preset="button">{title}</Text>
-        </Link>
+        </a>
       </button>
     );
   }

@@ -17,6 +17,7 @@ export function FloatingButton() {
       className="fixed bottom-8 right-8 z-100
       md:bottom-12 md:right-12
       lg:bottom-16 lg:right-16"
+      about="Entre em contato"
     >
       <Image
         src={utilsImages.wpp}
